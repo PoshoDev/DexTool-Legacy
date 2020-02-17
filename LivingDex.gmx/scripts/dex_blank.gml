@@ -1,0 +1,9 @@
+sprite =    -1;
+dexno =     0;
+name =      "ERROR";
+form =      "";
+type1 =     "Error";
+type2 =     "Error";
+idno =      0;
+icon_flag = "";
+own = false;
