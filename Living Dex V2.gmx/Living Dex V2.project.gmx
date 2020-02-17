@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="8246" name="datafiles">
-    <datafiles number="8246" name="fullart">
+  <datafiles number="8248" name="datafiles">
+    <datafiles number="8248" name="fullart">
       <datafile>
         <name>26MALE.png</name>
         <exists>-1</exists>
@@ -227,7 +227,7 @@
         <filename>20ALOLAN.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="8246" name="icons">
+    <datafiles number="8248" name="icons">
       <datafile>
         <name>1.png</name>
         <exists>-1</exists>
@@ -18674,6 +18674,23 @@
         <filename>658ASH.png</filename>
       </datafile>
     </datafiles>
+    <datafile>
+      <name>spritesheet.png</name>
+      <exists>-1</exists>
+      <size>657264</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>spritesheet.png</filename>
+    </datafile>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
@@ -18705,8 +18722,9 @@
     <script>scripts\scr_new.gml</script>
     <script>scripts\scr_load_new.gml</script>
     <script>scripts\scr_save.gml</script>
-    <script>scripts\scr_battleforms.gml</script>
+    <script>scripts\scr_forms_skip.gml</script>
     <script>scripts\scr_genskip.gml</script>
+    <script>scripts\scr_new_method.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_1</font>
@@ -18717,10 +18735,11 @@
     <object>objects\obj_source</object>
     <object>objects\obj_view</object>
     <object>objects\obj_slider</object>
+    <object>objects\obj_spritesheet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
+    <room>rooms\rom_spritesheet</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -25,17 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.render &lt;= global.maximum
+            <string>if round(global.render) &lt;= round(global.maximum)
     {
     scr_dex()
-    abort = scr_battleforms()
+    //abort = scr_battleforms()
+    abort = false
+    scr_forms_skip()
     own = global.pokemon[idno]
     
     //Jumping
-    if x &gt; (global.width*6)*global.mult
+    if x &gt; round((global.width*6)*global.mult)
         {
-        x = (global.width/2)*global.mult
-        y += (global.width)*global.mult
+        x = round((global.width/2)*global.mult)
+        y += round((global.width)*global.mult)
         }
     if (global.boxcount = 30 &amp;&amp; !(dexno = 152 || dexno = 252 || dexno = 387 || dexno = 494 || dexno = 650 || dexno = 722))
         {
@@ -70,7 +72,7 @@
     
     global.render++
     global.boxcount++
-    alarm[0] = 30//1
+    alarm[0] = 2//30//!V2 1
     alarm[1] = room_speed/4
     outline = false    
     lock = false
@@ -133,7 +135,10 @@ else
           <argument>
             <kind>1</kind>
             <string>if abort = false
-    instance_create(x+(global.width*global.mult),y,obj_newguy)
+    {
+    instance_create(round(x+(global.width*global.mult)),y,obj_newguy)
+    //instance_create(900,y,obj_newguy)
+    }
 else
     {
     global.boxcount--

@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.render = 1
+            <string>image_speed = 0
+
+scr_new_method()
+global.method = "old"
+
+global.render = 1
 global.iam = "null"
 global.current = "null"
-global.maximum = 10//1116
+global.maximum = 1116//10//!V2 1116
 global.width = 40
 global.mult = 2
 global.lock = false
@@ -37,8 +42,9 @@ global.count = 0 //for progress %
 global.font = font_add_sprite_ext(spr_font,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZéÉ#-'!?():@_.%",true,1)
 
 //Options
-global.option_battleforms = false
-global.option_genskip =     true
+global.option_forms_battle =    false
+global.option_forms_gender =    true
+global.option_genskip =         true
 
 
 scr_new()
@@ -58,14 +64,14 @@ else
 instance_create((global.width/2)*global.mult,(global.width/2)*global.mult,obj_newguy)
 instance_create(0,0,obj_slider)
 
-global.name = "BULBASAUR"
-global.dexno = 1
-global.sprite = sprite_add("icons\1.png",0,true,false,0,0);
-global.form = ""
-global.type1 = "Grass"
-global.type2 = "Poison"
-global.own = false
-global.bigsprite = sprite_add("fullart\1.png",0,true,false,0,0);
+global.name =       "BULBASAUR"
+global.dexno =      1
+global.sprite =     sprite_add("icons\1.png",0,true,false,0,0);
+global.form =       ""
+global.type1 =      "Grass"
+global.type2 =      "Poison"
+global.own =        false
+global.bigsprite =  sprite_add("fullart\1.png",0,true,false,0,0);
 </string>
           </argument>
         </arguments>
